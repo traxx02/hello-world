@@ -1,0 +1,75 @@
+{
+
+	"Angular Module": {
+		"prefix": "ngmodule",
+		"description": "Custom Module",
+		"body": [
+			"\"use strict\";",
+			"(function () {",
+			"",
+				"    angular.module(\"${module_name}\", []);",
+				
+
+			"})();"
+		],
+
+
+	},
+
+	"Angular Controller": {
+		"prefix": "ngcontroller",
+		"description": "Custom Controller",
+		"body": [
+			"\"use strict\";",
+			"(function () {",
+			"",
+				"    angular.module(\"${module_name}\", [])",
+				"        .controller(\"${controller_name}Controller\", ${controller_name}Controller);",
+				"",
+				"    ${controller_name}Controller.\\$inject = [\"${dependency1}\"];",
+				"    function ${controller_name}Controller(${dependency1}) {",
+				"",
+				"        var vm = this;",
+				"",
+				"        // TODO",
+				"        $0",	
+				"    }",
+			"})();"
+		],
+		
+	},
+
+
+	"Angular Factory": {
+		"prefix": "ngfactory",
+		"description": "Custom Factory",
+		"body": [
+			"\"use strict\";",
+			"(function () {",
+			"",
+				"    angular.module(\"${module_name}\", [])",
+				"        .factory(\"${factory_name}Service\", ${factory_name}Service);",
+				"",
+				"    ${factory_name}Service.\\$inject = [\"${dependency1}\"];",
+				"    function ${factory_name}Service(${dependency1}) {",
+				"",
+				"        var ${factory_name}Svc = {",
+				"",
+				"            ${func1}: ${func1}",
+				"",
+				"        }",
+				"        return ${factory_name}Svc;",
+				"",
+				"        // TODO",
+				"        function ${func1}() {",
+				"",
+				"            $0",	
+				"",
+				"        }",
+				"    }",
+			"})();"
+		],
+
+	},
+	
+}
